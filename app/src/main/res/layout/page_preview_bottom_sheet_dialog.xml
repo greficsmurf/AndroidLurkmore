@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.app.lurkmoarapp.vo.Resource"/>
+        <import type="android.text.Spanned"/>
+        <import type="androidx.lifecycle.LiveData"/>
+        <variable
+            name="resource"
+            type="Resource" />
+
+        <variable
+            name="pageHeaderText"
+            type="LiveData&lt;Spanned>"/>
+
+        <variable
+            name="pageTitleText"
+            type="LiveData&lt;String>" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/page_preview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+        <include
+            app:resource = "@{(Resource) resource}"
+            layout="@layout/page_header_preview_placeholder"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/page_header_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/open_page_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Widget.AppTheme.TextViewPageTitle"
+                    android:id="@+id/page_title"
+                    android:text="@{pageTitleText}"
+                    android:minWidth="200dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:background="@drawable/horizontal_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"/>
+                <TextView
+                    android:text="@{pageHeaderText}"
+                    android:id="@+id/page_header"
+                    style="@style/Widget.AppTheme.TextViewPage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/page_preview_bottom_sheet_dialog_height" />
+
+                <Button
+                    android:id="@+id/open_page_btn"
+                    style="@style/Widget.AppTheme.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/open_page_button_text"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/page_header_scrollview" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </FrameLayout>
+</layout>

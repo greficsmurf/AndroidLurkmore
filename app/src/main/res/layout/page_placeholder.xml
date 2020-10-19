@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <import type="com.app.lurkmoarapp.vo.Resource"/>
+
+        <variable
+            name="resource"
+            type="Resource" />
+    </data>
+    <com.facebook.shimmer.ShimmerFrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:isVisible="@{resource.status}">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                style="@style/Widget.AppTheme.TextViewPage"
+                android:background="@color/colorShimmerPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/page_section_placeholder_height"/>
+
+            <TextView
+                style="@style/Widget.AppTheme.TextViewPage"
+                android:background="@color/colorShimmerPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/page_section_placeholder_height"/>
+
+            <TextView
+                style="@style/Widget.AppTheme.TextViewPage"
+                android:background="@color/colorShimmerPlaceholder"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/page_section_placeholder_height"/>
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</layout>

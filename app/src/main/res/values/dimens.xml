@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="preview_header_max_height">400dp</dimen>
+    <dimen name="page_preview_bottom_sheet_dialog_height">400dp</dimen>
+    <dimen name="horizontal_divider_height">0.5dp</dimen>
+    <dimen name="page_section_placeholder_height">200dp</dimen>
+</resources>

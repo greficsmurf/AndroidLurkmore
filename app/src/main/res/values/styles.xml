@@ -1,0 +1,91 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+<!--        <item name="actionBarStyle">@style/Widget.AppTheme.ActionBar</item>-->
+<!--        <item name="toolbarNavigationButtonStyle">@style/Widget.AppTheme.ActionBar.Navigation</item>-->
+        <item name="toolbarStyle">@style/Widget.AppTheme.Toolbar</item>
+        <item name="android:textViewStyle">@style/Widget.AppTheme.TextView</item>
+        <item name="android:editTextStyle">@style/Widget.AppTheme.EditText</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/colorWhite</item>
+    </style>
+
+
+<!--    Additional  -->
+
+<!--    TextView-->
+    <style name="Widget.AppTheme.TextView" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="android:textColorLink">@color/colorLink</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.02</item>
+    </style>
+
+    <style name="Widget.AppTheme.TextViewListItem" parent="Widget.AppTheme.TextView">
+        <item name="android:textColor">@color/colorMainText</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="Widget.AppTheme.TextViewMini" parent="Widget.AppTheme.TextView">
+        <item name="android:textColor">@color/colorMainTextLight</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="Widget.AppTheme.TextViewPage" parent="Widget.AppTheme.TextView">
+        <item name="android:lineSpacingExtra">5dp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    <style name="Widget.AppTheme.TextViewPageCompact" parent="Widget.AppTheme.TextViewPage">
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+    <style name="Widget.AppTheme.TextViewPageTitle" parent="Widget.AppTheme.TextViewPage">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="Widget.AppTheme.TextViewContentTableItem" parent="Widget.AppTheme.TextView">
+        <item name="android:textSize">20sp</item>
+    </style>
+<!--    EditText-->
+    <style name="Widget.AppTheme.EditText" parent="android:Widget.EditText">
+        <item name="background">@null</item>
+    </style>
+
+<!--    Button-->
+    <style name="Widget.AppTheme.Button" parent="android:Widget.Button">
+        <item name="android:background">@drawable/my_default_button</item>
+        <item name="android:textSize">18sp</item>
+
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="Widget.AppTheme.ActionBar" parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="background">@color/colorWhite</item>
+    </style>
+
+    <style name="Widget.AppTheme.ActionBar.Navigation" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+
+    </style>
+
+    <style name="Widget.AppTheme.Toolbar" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="android:background">@color/colorWhite</item>
+    </style>
+</resources>

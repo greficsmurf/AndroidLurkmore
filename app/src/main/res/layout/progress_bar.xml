@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="com.app.lurkmoarapp.vo.Resource"/>
+
+        <variable
+            name="resource"
+            type="Resource" />
+    </data>
+    <merge>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="2.5dp">
+
+            <com.google.android.material.progressindicator.ProgressIndicator
+                style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Indeterminate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:isVisible="@{resource.status}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </FrameLayout>
+        <FrameLayout
+            android:isErrorVisible="@{resource.status}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <include
+                layout="@layout/error_layout"
+                />
+        </FrameLayout>
+
+    </merge>
+</layout>

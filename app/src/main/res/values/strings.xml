@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">LurkMoarApp</string>
+    <string name="home_fragment_title">Луркоморье</string>
+    <string name="search_fragment_title">Поиск</string>
+
+    <string name="search_view_title">Поиск</string>
+
+    <string name="open_link_error">Ссылка сломалась</string>
+    <string name="search_bar_init_error">Поиск сломался</string>
+
+    <string name="home_search_button_text">Найти в Луркоморье</string>
+    <string name="open_page_button_text">Читать</string>
+    <string name="search_history_header">Вы искали:</string>
+
+    <string name="history_delete_icon_description">Удалить историю</string>
+
+    <string name="error_indication">Error occurred</string>
+
+</resources>
