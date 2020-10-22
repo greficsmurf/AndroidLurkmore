@@ -12,7 +12,6 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="2.5dp">
-
             <com.google.android.material.progressindicator.ProgressIndicator
                 style="@style/Widget.MaterialComponents.ProgressIndicator.Linear.Indeterminate"
                 android:layout_width="match_parent"
@@ -22,7 +21,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
         </FrameLayout>
         <FrameLayout
             android:isErrorVisible="@{resource.status}"

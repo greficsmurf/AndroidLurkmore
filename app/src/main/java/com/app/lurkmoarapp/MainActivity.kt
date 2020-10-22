@@ -39,9 +39,8 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
         setContentView(R.layout.activity_main)
 
         toolbar = findViewById(R.id.toolbar)
-        toolbar.setTitle(R.string.search_view_title)
         setSupportActionBar(toolbar)
-
+        toolbar.setTitle(R.string.home_fragment_title)
         toolbar.setupWithNavController(navController, appBarConfig)
     }
 
